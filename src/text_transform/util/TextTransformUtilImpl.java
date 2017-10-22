@@ -8,7 +8,7 @@ import java.util.List;
 public class TextTransformUtilImpl implements TextTransformUtil {
 
     @Override
-    public List textTransform(String entryText) {
+    public String textTransform(String entryText) {
 
         List<Character> substitutionLetters = new ArrayList<>(Arrays.asList('a','e','i','o','u','á','é','í','ó','ú','ů'));
 
@@ -26,11 +26,12 @@ public class TextTransformUtilImpl implements TextTransformUtil {
 
         String transformedText = "";
         for (Character character : arrayOfChars) {
-            transformedText += " " + String.valueOf(character);
+            transformedText += String.valueOf(character);
         }
 
 
         System.out.println(new StringBuilder(transformedText).reverse().toString());
-        return arrayOfChars;
+        String reverse = new StringBuilder(transformedText).reverse().toString();
+        return reverse;
     }
 }
