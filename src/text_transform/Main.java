@@ -1,11 +1,8 @@
 package text_transform;
 
-
 import text_transform.util.TextTransformUtil;
 import text_transform.util.TextTransformUtilImpl;
-
 import java.util.Scanner;
-
 
 public class Main {
 
