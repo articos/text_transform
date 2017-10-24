@@ -12,7 +12,8 @@ public class TextTransformUtilTest {
 
         TextTransformUtil toTransform = new TextTransformUtilImpl();
 
-        assertEquals("Ahoj -> jOha","jOha",toTransform.textTransform("Ahoj"));
+        assertEquals("jOha",toTransform.textTransform("Ahoj"));
+        assertEquals(null,toTransform.textTransform(null));
     }
 
 }

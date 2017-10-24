@@ -9,6 +9,8 @@ public class TextTransformUtilImpl implements TextTransformUtil {
     @Override
     public String textTransform(String entryText) {
 
+        if (entryText == null) {return null;}
+
         List<Character> substitutionLetters = new ArrayList<>(Arrays.asList('a','e','i','o','u','á','é','í','ó','ú','ů'));
         String transformedText = "";
 
@@ -22,8 +24,6 @@ public class TextTransformUtilImpl implements TextTransformUtil {
             }
         }
 
-        System.out.println(new StringBuilder(transformedText).reverse().toString());
-        String reversedText = new StringBuilder(transformedText).reverse().toString();
-        return reversedText;
+        return new StringBuilder(transformedText).reverse().toString();
     }
 }
